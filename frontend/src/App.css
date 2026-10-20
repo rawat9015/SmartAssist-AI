@@ -1,0 +1,279 @@
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #202334;
+  background: #f4f5fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ececf3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  color: white;
+  background: linear-gradient(135deg, #6558e8, #8c63e9);
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #85879a;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #25b981;
+}
+
+.content {
+  padding: 22px 20px;
+}
+
+.section-heading,
+.response-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.section-heading h2,
+.response-heading h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.section-heading span,
+.response-heading span {
+  color: #9293a4;
+  font-size: 11px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 24px;
+}
+
+.action-button {
+  padding: 8px 11px;
+  border: 1px solid #e5e5ef;
+  border-radius: 9px;
+  color: #57596c;
+  background: #ffffff;
+  font-size: 12px;
+  transition: 0.15s ease;
+}
+
+.action-button:hover {
+  border-color: #aaa0f4;
+}
+
+.action-button.selected {
+  border-color: #d4ceff;
+  color: #5948d6;
+  background: #f0edff;
+  font-weight: 650;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #383a4d;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 115px;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid #e4e4ee;
+  border-radius: 11px;
+  outline: none;
+  color: #292b3c;
+  background: #fcfcfe;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+textarea:focus,
+select:focus {
+  border-color: #8978ed;
+  box-shadow: 0 0 0 3px #8c7af01c;
+}
+
+textarea::placeholder {
+  color: #a2a3b2;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.setting select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e5ef;
+  border-radius: 9px;
+  outline: none;
+  color: #484a5d;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.generate-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #6554df;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.15s ease;
+}
+
+.generate-button:hover {
+  background: #5140cb;
+}
+
+.generate-button span {
+  font-size: 18px;
+}
+
+.response-section {
+  margin-top: 26px;
+}
+
+.response-box {
+  min-height: 95px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #ececf4;
+  border-radius: 11px;
+  background: #fafaff;
+}
+
+.response-box p {
+  margin: 0;
+  color: #9a9bad;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid #ececf3;
+  color: #999aab;
+  font-size: 9px;
+  letter-spacing: 0.6px;
+}
+
+@media (max-width: 360px) {
+  .header,
+  .content {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .settings {
+    grid-template-columns: 1fr;
+  }
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+
+.login-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+}

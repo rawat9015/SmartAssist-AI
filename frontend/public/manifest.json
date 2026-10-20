@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "SmartAssist AI",
+    "version": "1.0.0",
+    "description": "Your AI writing assistant that works everywhere.",
+    "action": {
+        "default_title": "SmartAssist AI",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "http://localhost:5000/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

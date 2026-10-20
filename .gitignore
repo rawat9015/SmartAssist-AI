@@ -1,7 +1,23 @@
-node_modules
+
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
 .env
-dist
-build
-coverage
-.vscode
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build and cache files
+dist/
+.vite/
+.parcel-cache/
+
+# OS and editor files
 .DS_Store
+Thumbs.db
+.vscode/
